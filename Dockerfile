@@ -1,19 +1,17 @@
-FROM gcc:9.3
-
+FROM gcc:9.3 AS builder
 RUN apt-get update && apt-get install -y \
-    cmake
-
+    catch \
+    cmake && \
+    apt-get autoremove && \
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
 COPY . /usr/src/templateapp
-
 WORKDIR /usr/src/templateapp
-RUN mkdir build
+RUN make build && \
+    make install && \
+    make test
 
-WORKDIR /usr/src/templateapp/build
-RUN cmake .. -DCMAKE_INSTALL_PREFIX=/
-RUN cmake --build .
-RUN cmake --build . --target install
-# TODO should call makefile ^ (all steps should be defined in makefile)
-
-WORKDIR /usr/src/templateapp
-
+FROM ubuntu:latest
+COPY --from=builder /etc/init.d/templateapp.sh /etc/init.d/templateapp.sh
+COPY --from=builder /bin/templateapp.tsk /bin/templateapp.tsk
 CMD ["/etc/init.d/templateapp.sh"]
