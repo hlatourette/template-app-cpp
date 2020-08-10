@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/bin/templateapp.tsk
+/usr/local/bin/templateapp.tsk

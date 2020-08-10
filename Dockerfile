@@ -12,6 +12,6 @@ RUN make build && \
     make test
 
 FROM ubuntu:latest
-COPY --from=builder /etc/init.d/templateapp.sh /etc/init.d/templateapp.sh
-COPY --from=builder /bin/templateapp.tsk /bin/templateapp.tsk
-CMD ["/etc/init.d/templateapp.sh"]
+COPY --from=builder /usr/local/etc/init.d/templateapp.sh /usr/local/etc/init.d/templateapp.sh
+COPY --from=builder /usr/local/bin/templateapp.tsk /usr/local/bin/templateapp.tsk
+CMD ["/usr/local/etc/init.d/templateapp.sh"]

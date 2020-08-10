@@ -2,12 +2,13 @@ add_library(templateapp
     templateapp_util/templateapp_util.cpp
     )
 
-# target_link_libraries(templateapp 
-#    <dependencies>
-#    )
+target_link_libraries(templateapp PUBLIC
+    ${EXTRA_LIBS}
+    )
 
 target_include_directories(templateapp PUBLIC
     ${PROJECT_SOURCE_DIR}/src/templateapp_util
+    ${EXTRA_INCLUDES}
     )
 
 add_executable(templateapp.tsk
@@ -24,18 +25,17 @@ target_include_directories(templateapp.tsk PUBLIC
 
 install(TARGETS
         templateapp.tsk 
-    DESTINATION bin
+    DESTINATION /usr/local/bin
     COMPONENT templateapp
     )
 
 install(PROGRAMS
         ${PROJECT_SOURCE_DIR}/scripts/templateapp.sh
-    DESTINATION etc/init.d
+    DESTINATION /usr/local/etc/init.d
     COMPONENT templateapp
     )
 
-# install(FILES
-#         ${PROJECT_SOURCE_DIR}/assets/<filename>
-#     DESTINATION etc/init.d
-#     COMPONENT templateapp
-#     )
+install(FILES
+    DESTINATION /usr/local/share
+    COMPONENT templateapp
+    )
