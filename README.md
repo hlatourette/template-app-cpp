@@ -6,7 +6,7 @@ Template C++ application
 
 ### builder
 ```
-docker build --target builder -t myapp .
+docker build --target builder -t templateapp .
 ```
 
 ### full
