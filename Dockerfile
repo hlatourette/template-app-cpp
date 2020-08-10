@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y \
     apt-get autoremove && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/*
-COPY . /usr/src/templateapp
-WORKDIR /usr/src/templateapp
+COPY . /usr/local/src/templateapp
+WORKDIR /usr/local/src/templateapp
 RUN make build && \
     make install && \
     make test
