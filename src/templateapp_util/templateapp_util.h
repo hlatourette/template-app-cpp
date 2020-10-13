@@ -4,7 +4,12 @@
 #include <string>
 
 namespace templateapp {
-    // TODO doxygen
+    /**
+     * Answer the ultimate question
+     *
+     * @param question the ultimate question
+     * @return the answer to the ultimate question
+     */
     int meaningOfLifeTheUniverseAndEverything(const std::string& question);
 } // close namespace templateapp
 
