@@ -8,10 +8,15 @@ RUN apt-get update && apt-get install -y \
 COPY . /usr/local/src/templateapp
 WORKDIR /usr/local/src/templateapp
 RUN make build && \
-    make install && \
-    make test
+    make test && \
+    make package
 
-FROM ubuntu:latest
-COPY --from=builder /usr/local/etc/init.d/templateapp.sh /usr/local/etc/init.d/templateapp.sh
-COPY --from=builder /usr/local/bin/templateapp.tsk /usr/local/bin/templateapp.tsk
-CMD ["/usr/local/etc/init.d/templateapp.sh"]
+FROM ubuntu:latest as tester
+COPY --from=builder /usr/local/src/templateapp/build/ /usr/local/src/templateapp/build/
+WORKDIR /usr/local/src/templateapp/build
+RUN dpkg -i templateapp-Linux.deb
+
+# FROM ubuntu:latest as publisher
+# COPY --from=tester /usr/local/src/templateapp/build/...deb ....
+# test the install ... dpkg -i .deb
+# RUN dpkg-upload ...

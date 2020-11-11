@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(templateapp LANGUAGES C CXX)
+project(templateapp VERSION 0.0.1 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)

@@ -3,7 +3,7 @@ add_executable(unittest.tsk
     templateapp_util.t.cpp
     )
 
-target_link_libraries(unittest.tsk PUBLIC 
+target_link_libraries(unittest.tsk PRIVATE 
     catch2
     templateapp
     )
