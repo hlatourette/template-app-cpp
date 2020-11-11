@@ -5,7 +5,7 @@
 
 using namespace std;
 using namespace templateapp;
-     
+
 int main()
 {
   string question;
