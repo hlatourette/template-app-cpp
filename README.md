@@ -1,4 +1,4 @@
-# template-application
+# template-app-cpp
 Template C++ application
 
 ## Build
