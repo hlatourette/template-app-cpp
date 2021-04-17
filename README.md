@@ -5,25 +5,25 @@ Template C++ application
 
 ### Builder
 ```
-docker build --target builder -t templateapp .
+docker build --target builder -t templateappcpp .
 ```
 
 ### Full
 ```
-docker build -t templateapp .
+docker build -t templateappcpp .
 ```
 
 ## Test
 
 ### Unit
 ```
-docker build --target builder -t templateapp .
+docker build --target builder -t templateappcpp .
 ```
 
 ### Integration
 ```
-docker build --target tester -t templateapp .
-docker run -it --rm --name templateapp templateapp
+docker build --target tester -t templateappcpp .
+docker run -it --rm templateappcpp
 ```
 
 In container
@@ -33,7 +33,7 @@ In container
 
 ## Run
 ```
-docker run -it --rm --name templateapp templateapp
+docker run -it --rm templateappcpp
 ```
 
 In container
