@@ -5,7 +5,7 @@ add_executable(templateapp.tsk
 )
 
 target_link_libraries(templateapp.tsk
-    PRIVATE 
+    PRIVATE
         templateapp
 )
 
