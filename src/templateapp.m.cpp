@@ -3,16 +3,13 @@
 
 #include <templateapp_util.h>
 
-using namespace std;
 using namespace templateapp;
 
 int main()
 {
-  string question;
-
-  cout << "What would you like to know?" << endl;
-  cin >> question;
-  cout << meaningOfLifeTheUniverseAndEverything(question) << endl;
-
+  std::string question;
+  std::cout << "What would you like to know?" << std::endl;
+  std::cin >> question;
+  std::cout << meaningOfLifeTheUniverseAndEverything(question) << std::endl;
   return 0;
 }
