@@ -1,4 +1,3 @@
-add_subdirectory(catch)
 add_subdirectory(integration)
 add_subdirectory(unit)
 

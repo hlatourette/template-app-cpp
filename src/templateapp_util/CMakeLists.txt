@@ -1,14 +1,17 @@
-add_library(templateapp 
-    templateapp_util.cpp
-)
+add_library(templateapplib)
 
-target_link_libraries(templateapp
+target_link_libraries(templateapplib
     PUBLIC
     INTERFACE
     PRIVATE
 )
 
-target_include_directories(templateapp
+target_sources(templateapplib
+    PRIVATE
+        templateapp_util.cpp
+)
+
+target_include_directories(templateapplib
     PUBLIC
         .
     INTERFACE

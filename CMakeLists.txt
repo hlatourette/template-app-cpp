@@ -15,21 +15,20 @@ add_subdirectory(${TST_DIR})
 
 install(
     TARGETS
-        templateapp.tsk
-    DESTINATION /usr/bin
+        templateapp
     COMPONENT templateapp
 )
 
 install(
     PROGRAMS
         ${SCR_DIR}/templateapp.sh
-    DESTINATION /usr/bin
+    TYPE BIN
     COMPONENT templateapp
 )
 
 install(
     FILES
-    DESTINATION /usr/share
+    TYPE DATA
     COMPONENT templateapp
 )
 
