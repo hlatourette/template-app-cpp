@@ -1,9 +1,9 @@
-add_executable(unittest.tsk
+add_executable(templateapp.u.t
     test.m.cpp
     templateapp_util.t.cpp
 )
 
-target_link_libraries(unittest.tsk
+target_link_libraries(templateapp.u.t
     PRIVATE 
         catch2
         templateapp
