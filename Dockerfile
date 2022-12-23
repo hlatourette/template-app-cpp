@@ -1,6 +1,6 @@
 FROM gcc:12.2 AS builder
 RUN apt-get update && apt-get install -y \
-    catch \
+    catch2 \
     cmake && \
     apt-get autoremove && \
     apt-get -y clean && \
@@ -15,8 +15,3 @@ FROM ubuntu:latest as tester
 COPY --from=builder /usr/local/src/templateapp/build/ /usr/local/src/templateapp/build/
 WORKDIR /usr/local/src/templateapp/build
 RUN dpkg -i templateapp-Linux.deb
-
-# FROM ubuntu:latest as publisher
-# COPY --from=tester /usr/local/src/templateapp/build/...deb ....
-# test the install ... dpkg -i .deb
-# RUN dpkg-upload ...

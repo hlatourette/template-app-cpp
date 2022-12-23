@@ -1,4 +1,5 @@
-#include <catch.hpp>
+#include <catch2/catch.hpp>
+
 #include <templateapp_util.h>
 
 namespace templateapp {
