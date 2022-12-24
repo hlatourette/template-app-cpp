@@ -1,44 +1,29 @@
 # template-app-cpp
-Template C++ application
+Template C/C++ application
 
 ## Build
-
-### Builder
 ```
-docker build --target builder -t templateappcpp .
-```
-
-### Full
-```
-docker build -t templateappcpp .
+docker build [--target builder] -t templateappcpp .
 ```
 
 ## Test
 
 ### Unit
 ```
-docker build --target builder -t templateappcpp .
+docker build [--target builder] -t templateappcpp .
 ```
 
 ### Integration
 ```
-docker build --target tester -t templateappcpp .
+docker build [--target tester] -t templateappcpp .
 docker run -it --rm templateappcpp
-```
-
-In container
-```
-./tests/integration/integrationtest.tsk
+> ./tests/integration/templateapp.i.t
 ```
 
 ## Run
 ```
 docker run -it --rm templateappcpp
-```
-
-In container
-```
-cd /usr/bin
-./templateapp.sh
-./templateapp.tsk
+> cd /usr/bin
+> ./templateapp.sh
+> ./templateapp
 ```
