@@ -1,4 +1,4 @@
-add_library(templateapplib)
+add_library(templateapplib STATIC)
 
 target_link_libraries(templateapplib
     PUBLIC
