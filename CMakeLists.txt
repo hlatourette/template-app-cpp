@@ -4,6 +4,7 @@ project(templateapp VERSION 0.0.1 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(COMPONENT_NAME templateapp)
 set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 set(SCR_DIR ${PROJECT_SOURCE_DIR}/scripts)
 set(TST_DIR ${PROJECT_SOURCE_DIR}/tests)
@@ -16,20 +17,20 @@ add_subdirectory(${TST_DIR})
 install(
     TARGETS
         templateapp
-    COMPONENT templateapp
+    COMPONENT ${COMPONENT_NAME}
 )
 
 install(
     PROGRAMS
         ${SCR_DIR}/templateapp.sh
     TYPE BIN
-    COMPONENT templateapp
+    COMPONENT ${COMPONENT_NAME}
 )
 
 install(
     FILES
     TYPE DATA
-    COMPONENT templateapp
+    COMPONENT ${COMPONENT_NAME}
 )
 
 set(CPACK_SYSTEM_NAME "Linux")
