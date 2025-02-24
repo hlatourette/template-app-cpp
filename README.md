@@ -3,27 +3,24 @@ Template C/C++ application
 
 ## Build
 ```
-docker build [--target builder] -t templateappcpp .
+docker build --target=build-export --output type=local,dest=./output .
 ```
 
 ## Test
 
 ### Unit
 ```
-docker build [--target builder] -t templateappcpp .
+docker build --target=build -t templateapp .
 ```
 
 ### Integration
 ```
-docker build [--target tester] -t templateappcpp .
-docker run -it --rm templateappcpp
-> ./tests/integration/templateapp.i.t
+docker build --target=test -t templateapp .
+docker run -it --rm templateapp
 ```
 
 ## Run
 ```
-docker run -it --rm templateappcpp
-> cd /usr/bin
-> ./templateapp.sh
-> ./templateapp
+docker build --target=run -t templateapp .
+docker run -it --rm templateapp
 ```
