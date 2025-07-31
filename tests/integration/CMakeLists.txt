@@ -12,3 +12,4 @@ target_sources(templateapp.i.t
     PRIVATE
         templateapp_util.t.cpp
 )
+

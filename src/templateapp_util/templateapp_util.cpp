@@ -7,3 +7,4 @@ int meaningOfLifeTheUniverseAndEverything(const std::string& question) {
 }
 
 } // close namespace templateapp
+

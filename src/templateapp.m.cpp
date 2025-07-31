@@ -13,3 +13,4 @@ int main()
     std::cout << meaningOfLifeTheUniverseAndEverything(question) << std::endl;
     return 0;
 }
+

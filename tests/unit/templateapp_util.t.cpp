@@ -9,3 +9,4 @@ TEST_CASE( "The answer to life, the universe, and everything", "[templateapp_uti
 }
 
 } // close namespace templateapp
+

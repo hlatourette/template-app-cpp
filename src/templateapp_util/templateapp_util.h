@@ -14,3 +14,4 @@ namespace templateapp {
 } // close namespace templateapp
 
 #endif /* TEMPLATEAPP_UTIL_H */
+
