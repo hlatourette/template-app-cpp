@@ -5,11 +5,11 @@ add_executable(templateapp.u.t)
 target_link_libraries(templateapp.u.t
     PRIVATE
         Catch2::Catch2WithMain
-        templateapplib
+        util
 )
 
 target_sources(templateapp.u.t
     PRIVATE
-        templateapp_util.t.cpp
+        util.t.cpp
 )
 

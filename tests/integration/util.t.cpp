@@ -1,6 +1,6 @@
 #include <catch2/catch.hpp>
 
-#include <templateapp_util.h>
+#include "util.h"
 
 namespace templateapp {
 

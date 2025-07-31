@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include <templateapp_util.h>
+#include "util.h"
 
 using namespace templateapp;
 

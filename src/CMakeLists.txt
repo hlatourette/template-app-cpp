@@ -1,12 +1,12 @@
 set(EXECUTABLE_NAME templateapp)
 
-add_subdirectory(templateapp_util)
+add_subdirectory(util)
 
 add_executable(${EXECUTABLE_NAME})
 
 target_link_libraries(${EXECUTABLE_NAME}
     PRIVATE
-        templateapplib
+        util
 )
 
 target_sources(${EXECUTABLE_NAME}
