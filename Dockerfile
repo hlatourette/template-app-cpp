@@ -25,3 +25,4 @@ COPY --from=build /usr/local/src/templateapp/build/templateapp-Linux.deb /usr/lo
 WORKDIR /usr/local/bin
 RUN dpkg -i templateapp-Linux.deb
 ENTRYPOINT [ "/usr/bin/templateapp.sh" ]
+

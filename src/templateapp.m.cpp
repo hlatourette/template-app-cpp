@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include <templateapp_util.h>
+#include "util.h"
 
 using namespace templateapp;
 
@@ -13,3 +13,4 @@ int main()
     std::cout << meaningOfLifeTheUniverseAndEverything(question) << std::endl;
     return 0;
 }
+
